@@ -1,33 +1,49 @@
 import React from "react";
 import MetaTags from "react-meta-tags";
+import Loading from "../components/Loading";
 
 class About extends React.Component {
   state = {
     isLoading: true,
-    color: "pink"
+    color: "pink",
+    data: []
   };
-  componentDidMount = () => {
+  componentDidMount = async () => {
     setTimeout(this.handleChange, 2000);
+    await fetch("../data.json")
+      .then(res => res.json())
+      .then(result => {
+        this.setState({
+          data: result
+        });
+      });
   };
   handleChange = () => {
-    this.setState({
-      isLoading: false
-    });
+    if (this.state.isLoading) {
+      var A = document.getElementById("loading");
+      A.style.animation = "fadeOut 0.5s forwards";
+      A.addEventListener("animationend", () =>
+        this.setState({
+          isLoading: false
+        })
+      );
+    }
   };
+
   render() {
     return (
       <div>
         <MetaTags>
           <title>About | Ernie's Website</title>
-          <meta
-            name="description"
-            content="有沒有出現我有沒有出現我有沒有出現我有沒有出現我"
-          />
+          <meta name="description" content="AboutPage" />
         </MetaTags>
-        {this.state.isLoading && (
-          <h1 style={{ textAlign: "center" }}>LOADING</h1>
-        )}
+        {this.state.isLoading && <Loading />}
         ABOUT
+        <div>
+          {this.state.data.map((data, i) => (
+            <h1 key={i}>{data.title}</h1>
+          ))}
+        </div>
         <button
           style={{ background: this.state.color }}
           onClick={() =>

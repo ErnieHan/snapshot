@@ -49,33 +49,35 @@ function Page404() {
   );
 }
 
-function App() {
-  return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-            <li>
-              <Link to="/users/">Users</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          {/* {console.log("process.env.PUBLIC_URL", process.env.PUBLIC_URL)} */}
-          <Route path="/" exact component={Index} />
-          <Route path="/about/" component={About} />
-          <Route path="/users/" component={Users} />
-          <Route component={Page404} />
-        </Switch>
-      </div>
-    </Router>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Router basename={process.env.PUBLIC_URL}>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about/">About</Link>
+              </li>
+              <li>
+                <Link to="/users/">Users</Link>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            {/* {console.log("process.env.PUBLIC_URL", process.env.PUBLIC_URL)} */}
+            <Route path="/" exact component={Index} />
+            <Route path="/about/" component={About} />
+            <Route path="/users/" component={Users} />
+            <Route component={Page404} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
