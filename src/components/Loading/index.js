@@ -11,13 +11,13 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-size: 32px;
 `;
 
 class Loading extends React.Component {
   render() {
-    return <Div>Loading</Div>;
+    return <Div id="loading">Loading</Div>;
   }
 }
 

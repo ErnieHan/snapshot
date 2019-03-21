@@ -45,3 +45,12 @@ img {
 input {
   outline: 0;
 }
+
+@keyframes fadeOut {
+  from {
+    top: 0;
+  }
+  to {
+    top: 101%;
+  }
+}

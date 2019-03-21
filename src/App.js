@@ -40,11 +40,18 @@ class App extends React.Component {
     isLoading: true
   };
   componentDidMount = () => {
-    window.addEventListener("load", () =>
-      this.setState({
-        isLoading: false
-      })
-    );
+    setTimeout(this.Loading, 2000);
+  };
+  Loading = () => {
+    if (this.state.isLoading) {
+      const Loading = document.getElementById("loading");
+      Loading.style.animation = "fadeOut 1s forwards ease-out";
+      Loading.addEventListener("animationend", () =>
+        this.setState({
+          isLoading: false
+        })
+      );
+    }
   };
   render() {
     return (
