@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Noto+Sans+TC:700,900");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fugaz One", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
