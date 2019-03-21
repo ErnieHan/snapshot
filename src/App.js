@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
 import Layout from "./components/Layout";
 import Index from "./pages/Home";
+import Loading from "./components/Loading";
 
 function Users() {
   return (
@@ -35,10 +36,21 @@ function Page404() {
 }
 
 class App extends React.Component {
+  state = {
+    isLoading: true
+  };
+  componentDidMount = () => {
+    window.addEventListener("load", () =>
+      this.setState({
+        isLoading: false
+      })
+    );
+  };
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <Layout>
+          {this.state.isLoading && <Loading />}
           <Switch>
             <Route path="/" exact component={Index} />
             <Route path="/about/" component={About} />
