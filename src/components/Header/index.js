@@ -6,6 +6,7 @@ const HeaderDiv = styled.header`
   width: 100%;
   height: 65px;
   border-bottom: 1px solid #e0e0e0;
+  background: #ffffff;
 `;
 
 const InlineDiv = styled.div`

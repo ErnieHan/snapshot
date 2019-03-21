@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Blog from "../Blog";
+import Search from "../Search";
+import RecentPosts from "../RecentPosts";
 
 const SectionOutline = styled.div`
   width: 100%;
@@ -27,9 +29,14 @@ class Section extends React.Component {
     return (
       <SectionOutline>
         <Left>
-          <Blog />
+          <Blog image="01" />
+          <Blog image="03" />
+          <Blog image="05" />
         </Left>
-        <Right>1123</Right>
+        <Right>
+          <Search />
+          <RecentPosts />
+        </Right>
       </SectionOutline>
     );
   }

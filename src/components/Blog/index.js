@@ -3,6 +3,12 @@ import styled from "styled-components";
 
 const BlogOutline = styled.div`
   font-family: "Montserrat";
+  margin-bottom: 35px;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 `;
 const Left = styled.div`
   width: 40%;
@@ -53,7 +59,7 @@ class Blog extends React.Component {
     return (
       <BlogOutline>
         <Left>
-          <img src={require("../../assets/01.jpg")} />
+          <img src={require(`../../assets/${this.props.image}.jpg`)} />
         </Left>
         <Right>
           <h2>Submitted and indexed</h2>

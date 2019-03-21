@@ -9,6 +9,7 @@ body {
   padding: 0;
   font-family: "Fugaz One", "Noto Sans TC", sans-serif;
   font-size: 16px;
+  /* background: #3b5572; */
 }
 
 h1,
@@ -39,4 +40,8 @@ a {
 
 img {
   max-width: 100%;
+}
+
+input {
+  outline: 0;
 }
