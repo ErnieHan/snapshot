@@ -13,6 +13,9 @@ const BlogOutline = styled.div`
 const Left = styled.div`
   width: 40%;
   float: left;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const Right = styled.div`
   width: 60%;
@@ -36,6 +39,10 @@ const Right = styled.div`
     letter-spacing: 2px;
     font-size: 14px;
     line-height: 1.8;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding-left: 0;
   }
 `;
 

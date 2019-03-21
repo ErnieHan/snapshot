@@ -1,28 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const SearchOutline = styled.div`
+const SearchOutline = styled.input`
   width: 100%;
   border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 25px;
-  input {
-    width: 80%;
-    padding: 8px;
-    margin: 15px auto;
-    border: 1px solid #ccc;
-  }
+  padding: 15px 20px;
 `;
 
 class Search extends React.Component {
   render() {
-    return (
-      <SearchOutline>
-        <input type="text" placeholder="Search" />
-      </SearchOutline>
-    );
+    return <SearchOutline type="text" placeholder="Search" />;
   }
 }
 

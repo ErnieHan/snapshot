@@ -5,6 +5,7 @@ import Header from "../Header";
 const LayoutDiv = styled.div`
   max-width: 1230px;
   padding: 0 15px;
+  padding-top: 65px;
   margin: 0 auto;
 `;
 

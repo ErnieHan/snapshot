@@ -7,6 +7,10 @@ const HeaderDiv = styled.header`
   height: 65px;
   border-bottom: 1px solid #e0e0e0;
   background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
 `;
 
 const InlineDiv = styled.div`
@@ -21,6 +25,9 @@ const InlineDiv = styled.div`
 
 const Logo = styled.div`
   font-size: 32px;
+  @media screen and (max-width: 767px) {
+    font-size: 22px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -39,6 +46,14 @@ const Socail = styled.a`
   filter: grayscale(1);
   opacity: 0.5;
   margin-left: 10px;
+`;
+
+const MenuMobile = styled.div`
+  font-size: 32px;
+  display: none;
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
 `;
 
 class Header extends React.Component {
@@ -84,6 +99,9 @@ class Header extends React.Component {
               </Socail>
             </ul>
           </Nav>
+          <MenuMobile>
+            <i class="fas fa-bars" />
+          </MenuMobile>
         </InlineDiv>
       </HeaderDiv>
     );
