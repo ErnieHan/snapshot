@@ -2,16 +2,6 @@ import React from "react";
 import MetaTags from "react-meta-tags";
 
 class About extends React.Component {
-  componentDidMount = async () => {
-    await fetch("../data.json")
-      .then(res => res.json())
-      .then(result => {
-        this.setState({
-          data: result
-        });
-      });
-  };
-
   render() {
     return (
       <div>
