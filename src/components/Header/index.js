@@ -100,7 +100,7 @@ class Header extends React.Component {
             </ul>
           </Nav>
           <MenuMobile>
-            <i class="fas fa-bars" />
+            <i className="fas fa-bars" />
           </MenuMobile>
         </InlineDiv>
       </HeaderDiv>

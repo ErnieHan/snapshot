@@ -47,10 +47,13 @@ input {
 }
 
 @keyframes fadeOut {
-  from {
+  0% {
     top: 0;
   }
-  to {
+  50% {
+    top: 0;
+  }
+  100% {
     top: 101%;
   }
 }

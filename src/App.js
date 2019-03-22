@@ -40,19 +40,15 @@ class App extends React.Component {
     isLoading: true
   };
   componentDidMount = () => {
-    setTimeout(this.Loading, 2000);
+    setTimeout(this.Loading, 3000);
   };
   Loading = () => {
-    if (this.state.isLoading) {
-      const Loading = document.getElementById("loading");
-      Loading.style.animation = "fadeOut 1s forwards ease-out";
-      Loading.addEventListener("animationend", () =>
-        this.setState({
-          isLoading: false
-        })
-      );
-    }
+    console.log("close");
+    this.setState({
+      isLoading: false
+    });
   };
+  removeLoading = () => {};
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
